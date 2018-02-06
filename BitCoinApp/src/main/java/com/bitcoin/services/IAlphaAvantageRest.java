@@ -9,7 +9,7 @@ public interface IAlphaAvantageRest {
 	public String API_KEY = "G9C6RBMXKKCRK5R0";	
 	public String BASE_URL = "https://www.alphavantage.co/query?";
 	
-	public Map<String, Object> getResponse(String function , String TimeFrequency,String symbol);
+	public Map<String, Object> getResponse(RequestQueryParam query);
 	
-	public String constructQueryParam(String function,String TimeFrequency,String symbol);
+	public String constructQueryParam(RequestQueryParam query);
 }

@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class AlphaAvantageRestImpl implements IAlphaAvantageRest {
 
-	public Map<String, Object> getResponse(String function, String TimeFrequency, String symbol) {
+	public Map<String, Object> getResponse(RequestQueryParam queryParam) {
 		// TODO Auto-generated method stub
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
@@ -22,7 +22,7 @@ public class AlphaAvantageRestImpl implements IAlphaAvantageRest {
 			ObjectMapper mapper = new ObjectMapper();
 			
 			// System.out.println("URL : " + url.toString());
-			String queryParams = this.constructQueryParam(function, TimeFrequency, symbol);
+			String queryParams = this.constructQueryParam(queryParam);
 			//System.out.println(BASE_URL.toString() + queryParams);
 			String responseString = restTemplate.getForObject(BASE_URL.toString() + queryParams, String.class);
 			map = mapper.readValue(responseString, new TypeReference<Map<String, Object>>(){});
@@ -41,16 +41,19 @@ public class AlphaAvantageRestImpl implements IAlphaAvantageRest {
 		
 	}
 
-	public String constructQueryParam(String function, String TimeFrequency, String symbol) {
+	public String constructQueryParam(RequestQueryParam queryParam) {
 		StringBuffer params = new StringBuffer();
-		if (!StringUtils.isEmpty(function)) {
-			params.append("function=").append(function);
+		if (!StringUtils.isEmpty(queryParam.getFunction())) {
+			params.append("function=").append(queryParam.getFunction());
 		}
-		if (!StringUtils.isEmpty(TimeFrequency)) {
-			params.append("_").append(TimeFrequency);
+		if (!StringUtils.isEmpty(queryParam.getTimeFrequency())) {
+			params.append("_").append(queryParam.getTimeFrequency());
 		}
-		if (!StringUtils.isEmpty(symbol)) {
-			params.append("&symbol=").append(symbol).append("&market=USD");
+		if (!StringUtils.isEmpty(queryParam.getInterval())) {
+			params.append("&interval=").append(queryParam.getInterval());
+		}
+		if (!StringUtils.isEmpty(queryParam.getSymbol())) {
+			params.append("&symbol=").append(queryParam.getSymbol()).append("&market=USD");
 		}
 		params.append("&apikey=").append(API_KEY);
 		return params.toString();
