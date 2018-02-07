@@ -1,4 +1,4 @@
-package com.bitcoin.services;
+package com.bitcoin.services.rest;
 
 public class RequestQueryParam {
 
