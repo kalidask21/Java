@@ -1,5 +1,6 @@
 package com.bitcoin.services.crypto.util;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -39,5 +40,15 @@ public final class CryptoUtils {
 	
 	public String splitRate1(String rate) {
 		return rate.toString().split(",")[0].split("=")[1];
+	}
+	
+	public static Float maxRate(List<Object> rates){
+		List<Float> ratesLong = rates.stream().map(obj -> Float.valueOf(obj.toString())).collect(Collectors.toList());
+		return ratesLong.stream().max(Float::compare).get();
+	}
+	
+	public static Float minRate(List<Object> rates){
+		List<Float> ratesLong = rates.stream().map(obj -> Float.valueOf(obj.toString())).collect(Collectors.toList());
+		return ratesLong.stream().min(Float::compare).get();
 	}
 }

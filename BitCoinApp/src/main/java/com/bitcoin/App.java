@@ -23,7 +23,15 @@ public class App {
 			@Override
 			public void run() {
 				System.out.println("Hello App! Executior Started ");
-				CryptoUtils.ReadableResponse(crypto.callRipple(),"2018-02-06");
+				try {
+					List<Object> RatesRespone = CryptoUtils.CovertRatesMapToListByDate(crypto.callLiteCoin(),null);
+					RatesRespone = CryptoUtils.splitRateFromResponse(RatesRespone);
+					System.out.println(" RatesRespone "+RatesRespone);
+					System.out.println(" Max Rate is "+CryptoUtils.maxRate(RatesRespone));
+					System.out.println(" Max Rate is "+CryptoUtils.minRate(RatesRespone));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 				
 			}
 		}, 0, 10, TimeUnit.MINUTES);
