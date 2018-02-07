@@ -6,7 +6,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import com.bitcoin.services.crypto.CryptoCoinInterface;
-import com.bitcoin.services.crypto.CrytoCoinServiceImpl;
+import com.bitcoin.services.crypto.CryptoCoinServiceImpl;
 import com.bitcoin.services.crypto.util.CryptoUtils;
 
 /**
@@ -17,7 +17,7 @@ public class App {
 
 	public void scheduleExecutor() {
 
-		CryptoCoinInterface crypto = new CrytoCoinServiceImpl();
+		CryptoCoinInterface crypto = new CryptoCoinServiceImpl();
 		ScheduledExecutorService exec = Executors.newSingleThreadScheduledExecutor();
 		exec.scheduleAtFixedRate(new Runnable() {
 			@Override

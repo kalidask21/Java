@@ -9,11 +9,11 @@ import com.bitcoin.services.rest.AlphaAvantageRestImpl;
 import com.bitcoin.services.rest.IAlphaAvantageRest;
 import com.bitcoin.services.rest.RequestQueryParam;
 
-public class CrytoCoinServiceImpl implements CryptoCoinInterface {
+public class CryptoCoinServiceImpl implements CryptoCoinInterface {
 
 	RequestQueryParam query = new RequestQueryParam();
 
-	public CrytoCoinServiceImpl() {
+	public CryptoCoinServiceImpl() {
 		query.setFunction("DIGITAL_CURRENCY");
 		query.setTimeFrequency("INTRADAY");
 		query.setInterval("1min");
