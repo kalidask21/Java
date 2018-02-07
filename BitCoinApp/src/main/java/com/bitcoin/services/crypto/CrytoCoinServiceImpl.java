@@ -1,63 +1,68 @@
 package com.bitcoin.services.crypto;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 import com.bitcoin.services.rest.AlphaAvantageRestImpl;
 import com.bitcoin.services.rest.IAlphaAvantageRest;
 import com.bitcoin.services.rest.RequestQueryParam;
 
-public class CrytoCoinServiceImpl implements CryptoCoinInterface{
+public class CrytoCoinServiceImpl implements CryptoCoinInterface {
 
-	
 	RequestQueryParam query = new RequestQueryParam();
-	public CrytoCoinServiceImpl(){
+
+	public CrytoCoinServiceImpl() {
 		query.setFunction("DIGITAL_CURRENCY");
 		query.setTimeFrequency("INTRADAY");
 		query.setInterval("1min");
 	}
-	
+
 	@Override
-	public void callBitCoin() {
+	public Map<String, Object> callBitCoin() {
 		// TODO Auto-generated method stub
 		query.setSymbol("BTC");
-		RestEndCaller();
-		
+		return RestEndCaller();
+
 	}
 
 	@Override
-	public void callLiteCoin() {
+	public Map<String, Object> callLiteCoin() {
 		// TODO Auto-generated method stub
 		query.setSymbol("LTC");
-		RestEndCaller();
+		return RestEndCaller();
 	}
 
 	@Override
-	public void callEtherium() {
+	public Map<String, Object> callEtherium() {
 		// TODO Auto-generated method stub
 		query.setSymbol("ETH");
-		RestEndCaller();
+		return RestEndCaller();
 	}
 
 	@Override
-	public void callRipple() {
+	public Map<String, Object> callRipple() {
 		// TODO Auto-generated method stub
 		query.setSymbol("XRP");
-		RestEndCaller();
+		return RestEndCaller();
 	}
-	
-	private void RestEndCaller() {
+
+	private Map<String,Object> RestEndCaller() {
+		Map<String,Object> seriesMap = Collections.EMPTY_MAP;
 		try {
 			IAlphaAvantageRest alpsRest = new AlphaAvantageRestImpl();
 			String responseString = alpsRest.getResponse(query);
 			Object timeSeries = alpsRest.getTimeSeries(alpsRest.convertResponsStringToMap(responseString));
-			Map<String,Object> seriesMap = (Map<String, Object>) timeSeries;
+			seriesMap = (Map<String, Object>) timeSeries;
 			seriesMap.forEach((k,v) -> {
-				System.out.println(" Time is "+ k + " Val is "+v.toString().split(",")[0]);
+				//System.out.println(" Time is "+ k + " Val is "+v.toString().split(",")[0]);
 			});
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		return seriesMap;
 	}
+
 }

@@ -1,12 +1,14 @@
 package com.bitcoin.services.crypto;
 
+import java.util.Map;
+
 public interface CryptoCoinInterface {
 
-	void callBitCoin();
+	Map<String,Object> callBitCoin();
 	
-	void callLiteCoin();
+	Map<String,Object> callLiteCoin();
 	
-	void callEtherium();
+	Map<String,Object> callEtherium();
 	
-	void callRipple();
+	Map<String,Object> callRipple();
 }
