@@ -1,8 +1,7 @@
 package com.practice;
 
 import java.util.Arrays;
-
-import javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction;
+import java.util.StringTokenizer;
 
 public class StringClass {
 
@@ -28,7 +27,34 @@ public class StringClass {
 		
 		String s1 = SortString("kalidas");
 		String s2 = SortString("kalsida");
-		isAnagram(s1,s2);
+		//isAnagram(s1,s2);
+		
+		removeUnderScore("Kalidas_Kanniappan_MR");
+		String val = null;
+		val = "test";
+		System.out.println(isEmpty(val));
 	}
+	
+	
+	public static String removeUnderScore(String s) {
+		StringBuffer sbf = new StringBuffer();
+		StringTokenizer strToke = new StringTokenizer(s, "_");
+		int count  = -1;
+		while(strToke.hasMoreTokens()) {
+			sbf.append(" ");
+			sbf.append(strToke.nextToken());
+			count++;
+		}
+		System.out.println("UnderScore count is "+count);
+		System.out.println("removeunderScore : "+sbf.toString());
+		return sbf.toString();
+		
+	}
+	
+	 public static boolean isEmpty(final CharSequence cs) {
+	        return cs == null || cs.length() == 0;
+	 }
+
+	
 	
 }
