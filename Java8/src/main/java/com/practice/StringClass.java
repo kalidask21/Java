@@ -21,18 +21,32 @@ public class StringClass {
 			System.out.println("Its not anagram");
 	}
 	
+	private static void replaceContentLogic(String sentence,String src,String dest) {
+		sentence = sentence.replace(src, dest);
+		System.out.println(sentence);
+		
+	}
+	
+	
+	
 	
 	public static void main(String[] args) {
 		System.out.println();
+		replaceContentLogic("Hey Kalidas how your doing,Your fullname is Kalidas Kanniappan , am i Right ?","Kalidas","Balaji");
 		
-		String s1 = SortString("kalidas");
-		String s2 = SortString("kalsida");
+		
+		//System.out.println("Kalidas".split("al"));
+	///for(String s :"Kalidas".split("al"))
+		 //       System.out.println(s);
+		
+		//String s1 = SortString("kalidas");
+		//String s2 = SortString("kalsida");
 		//isAnagram(s1,s2);
 		
-		removeUnderScore("Kalidas_Kanniappan_MR");
-		String val = null;
-		val = "test";
-		System.out.println(isEmpty(val));
+		//removeUnderScore("Kalidas_Kanniappan_MR");
+		//String val = null;
+		//val = "test";
+		//System.out.println(isEmpty(val));
 	}
 	
 	
