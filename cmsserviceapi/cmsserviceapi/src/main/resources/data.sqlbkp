@@ -1,0 +1,11 @@
+-- Exceute the below insert once its up
+INSERT INTO facility (id, facility_name, facility_loc, facility_zip, facility_kiosk_id) VALUES (1, 'California Fac1', 'California', '99494', 1);
+INSERT INTO facility (id, facility_name, facility_loc, facility_zip, facility_kiosk_id) VALUES (2, 'California Fac2', 'California', '99494', 2);
+
+	
+INSERT INTO kiosk (id, kiosk_name, printer_id) VALUES (1, 'Kiosk 1', '1');
+INSERT INTO kiosk (id, kiosk_name, printer_id) VALUES (2, 'Kiosk 2', '1');
+
+INSERT INTO printer (id, printer_name) VALUES ('1', 'Printer 1');
+	
+	

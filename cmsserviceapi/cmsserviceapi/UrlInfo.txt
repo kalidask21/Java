@@ -1,0 +1,14 @@
+GET - http://localhost:9091/cms-unsecured-dataapi/facility/
+GET - http://localhost:9091/cms-unsecured-dataapi/facility/1
+PUT - http://localhost:9091/cms-unsecured-dataapi/facility/1
+DELETE - http://localhost:9091/cms-unsecured-dataapi/facility/1
+
+GET - http://localhost:9091/cms-unsecured-dataapi/kiosk/
+GET - http://localhost:9091/cms-unsecured-dataapi/kiosk/1
+PUT - http://localhost:9091/cms-unsecured-dataapi/kiosk/1
+DELETE - http://localhost:9091/cms-unsecured-dataapi/kiosk/1
+
+GET - http://localhost:9091/cms-unsecured-dataapi/printer/
+GET - http://localhost:9091/cms-unsecured-dataapi/printer/1
+PUT - http://localhost:9091/cms-unsecured-dataapi/printer/1
+DELETE - http://localhost:9091/cms-unsecured-dataapi/printer/1
