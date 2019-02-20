@@ -22,6 +22,17 @@ public class CustomLinkedList {
        }   
     }
 
+	public int findMiddle() {
+		Node onejumpHead = head;
+		Node twojumpHead = head;
+		
+		while (twojumpHead != null && twojumpHead.next !=null ) {
+			twojumpHead = twojumpHead.next.next;
+			onejumpHead = onejumpHead.next;
+		}
+		return onejumpHead.data;
+	}
+	
 	public boolean findValue(int value) {
 		while (head != null) {
 			System.out.println("Data : " + head.data);
@@ -31,6 +42,22 @@ public class CustomLinkedList {
 			head = head.next;
 		}
 		return false;
+	}
+	
+	
+	public void deleteValue(int value) {
+		if(head.data == value) {
+			head = head.next;
+		}
+		while (head != null && null != head.next) {
+			System.out.println("Data : " + head.data);
+			if(head.next.data == value) {
+				//System.out.println("Data : " + head.next.data);
+				head = head.next.next;				
+			}else {
+				head = head.next;
+			}
+		}
 	}
 
 	public static class Node {
@@ -42,21 +69,6 @@ public class CustomLinkedList {
 			this.data = data;
 		}
 
-		public int data() {
-			return data;
-		}
-
-		public void setData(int data) {
-			this.data = data;
-		}
-
-		public Node next() {
-			return next;
-		}
-
-		public void setNext(Node next) {
-			this.next = next;
-		}
 
 	}
 
@@ -66,9 +78,12 @@ public class CustomLinkedList {
 		culLinkedList.add(new Node(40));
 		culLinkedList.add(new Node(55));
 		culLinkedList.add(new Node(72));
+		culLinkedList.add(new Node(79));
+		culLinkedList.add(new Node(90));
 
-		//culLinkedList.printvalue();
-		System.out.println(culLinkedList.findValue(40));
+		//
+		culLinkedList.deleteValue(79);
+		culLinkedList.printvalue();
 		// System.out.println("Head : "+culLinkedList.head().data());
 		// System.out.println("Tail : "+culLinkedList.tail().data());
 

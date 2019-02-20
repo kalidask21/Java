@@ -21,6 +21,9 @@ public class StringClass {
 	}
 
 	private static void replaceContentLogic(String sentence, String src, String dest) {
+		if(sentence == null)
+			return;
+		
 		sentence = sentence.replace(src, dest);
 		System.out.println(sentence);
 
@@ -28,7 +31,7 @@ public class StringClass {
 
 	public static void main(String[] args) {
 		System.out.println();
-		replaceContentLogic("Hey Kalidas how your doing,Your fullname is Kalidas Kanniappan , am i Right ?", "Kalidas",
+		replaceContentLogic(null, "Kalidas",
 				"Balaji");
 
 		// System.out.println("Kalidas".split("al"));
