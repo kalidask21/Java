@@ -2746,3 +2746,35 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2019-02-19 16:54:40.015  INFO 13084 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
 2019-02-19 16:54:40.021  INFO 13084 --- [http-nio-8085-exec-1] c.s.d.service.FinanceServiceImpl         : Search Text is 
 2019-02-19 16:54:40.028  INFO 13084 --- [http-nio-8085-exec-1] c.s.d.service.FinanceServiceImpl         : Search Result Size is 
+2019-02-19 16:55:29.391  INFO 13084 --- [Thread-772] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-19 16:55:29.815  INFO 13084 --- [restartedMain] c.s.dictionaryservice.config.SpringApp   : Starting SpringApp on LR90FYLHU with PID 13084 (C:\PerDev\git\Java\dictionaryservice\target\classes started by kalika in C:\PerDev\git\Java\dictionaryservice)
+2019-02-19 16:55:29.816  INFO 13084 --- [restartedMain] c.s.dictionaryservice.config.SpringApp   : No active profile set, falling back to default profiles: default
+2019-02-19 16:55:30.108  INFO 13084 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$f059b08b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-19 16:55:30.281  INFO 13084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2019-02-19 16:55:30.282  INFO 13084 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-19 16:55:30.282  INFO 13084 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-19 16:55:30.310  INFO 13084 --- [restartedMain] o.a.c.c.C.[Tomcat-8].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-02-19 16:55:30.310  INFO 13084 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 493 ms
+2019-02-19 16:55:30.406  INFO 13084 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-19 16:55:30.455  INFO 13084 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-02-19 16:55:30.468  INFO 13084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2019-02-19 16:55:30.468  INFO 13084 --- [restartedMain] c.s.dictionaryservice.config.SpringApp   : Started SpringApp in 0.674 seconds (JVM running for 3575.036)
+2019-02-19 16:55:30.469  INFO 13084 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-02-19 18:02:49.965  INFO 5152 --- [main] c.s.financeservice.TransactionTestClass  : Starting TransactionTestClass on LR90FYLHU with PID 5152 (started by kalika in C:\PerDev\git\Java\dictionaryservice)
+2019-02-19 18:02:49.968  INFO 5152 --- [main] c.s.financeservice.TransactionTestClass  : No active profile set, falling back to default profiles: default
+2019-02-19 18:02:52.945  INFO 5152 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$f1e4c0b9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-19 18:02:55.846  INFO 5152 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-19 18:02:56.707  INFO 5152 --- [main] c.s.financeservice.TransactionTestClass  : Started TransactionTestClass in 7.366 seconds (JVM running for 9.154)
+2019-02-19 18:02:57.338  INFO 5152 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-19 18:03:25.733  INFO 14084 --- [main] c.s.financeservice.TransactionTestClass  : Starting TransactionTestClass on LR90FYLHU with PID 14084 (started by kalika in C:\PerDev\git\Java\dictionaryservice)
+2019-02-19 18:03:25.736  INFO 14084 --- [main] c.s.financeservice.TransactionTestClass  : No active profile set, falling back to default profiles: default
+2019-02-19 18:03:27.941  INFO 14084 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$6aff8631] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-19 18:03:29.454  INFO 14084 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-19 18:03:30.121  INFO 14084 --- [main] c.s.financeservice.TransactionTestClass  : Started TransactionTestClass in 5.084 seconds (JVM running for 6.667)
+2019-02-19 18:03:30.509  INFO 14084 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-02-19 18:04:07.714  INFO 13596 --- [main] c.s.financeservice.TransactionTestClass  : Starting TransactionTestClass on LR90FYLHU with PID 13596 (started by kalika in C:\PerDev\git\Java\dictionaryservice)
+2019-02-19 18:04:07.724  INFO 13596 --- [main] c.s.financeservice.TransactionTestClass  : No active profile set, falling back to default profiles: default
+2019-02-19 18:04:09.481  INFO 13596 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$f1e4c0b9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-19 18:04:11.185  INFO 13596 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-02-19 18:04:11.878  INFO 13596 --- [main] c.s.financeservice.TransactionTestClass  : Started TransactionTestClass in 4.664 seconds (JVM running for 5.997)
+2019-02-19 18:04:12.283  INFO 13596 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
