@@ -14,11 +14,11 @@ public class HomeController {
 	@GetMapping("/hello")
 	@ResponseStatus(code=HttpStatus.OK)
 	public ResponseEntity<String> hello() {
-	    return new ResponseEntity<>("Hello World!", HttpStatus.OK);
+	    return new ResponseEntity<>("Hello !, Server is up and running ", HttpStatus.OK);
 	}
 	
 	
-	@GetMapping("/customhello/{message}")
+	@GetMapping("/hello/{message}")
 	@ResponseStatus(code=HttpStatus.OK)
 	public ResponseEntity<String> customHello(@PathVariable("message") String message) {
 		if(message.length()<2) {

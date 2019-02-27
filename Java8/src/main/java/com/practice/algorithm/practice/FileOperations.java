@@ -21,7 +21,7 @@ public class FileOperations {
 
 	static void WriteFile() {
 
-		try (BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\apps\\prodclean212Out.txt"))) {
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\apps\\prodclean222Out.txt"))) {
 			bw.write(sbfData.toString());
 			System.out.println(sbfData.toString());
 
@@ -32,7 +32,7 @@ public class FileOperations {
 	}
 
 	static void readFile() {
-		File f = new File("C:\\apps\\prodclean212.txt");
+		File f = new File("C:\\apps\\prodclean222.txt");
 		try (BufferedReader b = new BufferedReader(new FileReader(f));) {
 			String readLine = "";
 			System.out.println("Reading file using Buffered Reader");
