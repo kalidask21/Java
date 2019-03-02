@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
  */
  
 public class CrunchifyGetPingStatusWithExecutorService {
-	private static final int MYTHREADS = 3;
+	private static final int MYTHREADS = 2;
  
 	public static void main(String args[]) throws Exception {
 		ExecutorService executor = Executors.newFixedThreadPool(MYTHREADS);
@@ -34,7 +34,7 @@ public class CrunchifyGetPingStatusWithExecutorService {
 		System.out.println("\nFinished all threads");
 	}
  
-	public static class MyRunnable implements Runnable {
+	public static class MyRunnable implements Runnable{
 		private final String url;
  
 		MyRunnable(String url) {
