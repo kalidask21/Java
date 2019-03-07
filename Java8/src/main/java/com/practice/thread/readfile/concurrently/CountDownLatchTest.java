@@ -17,12 +17,12 @@ public class CountDownLatchTest {
 	
 	public static void main(String[] args) throws InterruptedException {
 
-		int noOfOrders = 6;
+		int noOfOrders = 2;
 		CountDownLatch countDL = new CountDownLatch(noOfOrders);
 		List<String> content = new ArrayList<>();
 		Thread th1 = new Thread(new Server(countDL, content));
 		th1.start();
-		for (int i = 1; i <= 2; i++) {
+		for (int i = 1; i <= 6; i++) {
 			int randomNum = (int)(Math.random() * 4);
 			new Thread(new Kitchen(countDL, content), "Kichen " + i + " - Order is "+orders.get(randomNum)).start();
 		};
@@ -97,7 +97,7 @@ class Kitchen implements Runnable {
 				contentWriter.add("Thread : " + Thread.currentThread().getName() +" : Order is ready");
 				// System.out.println("Thread : "+Thread.currentThread().getName() +" Order is
 				// ready");
-			}
+		   }
 
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
