@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -14,6 +15,21 @@ import java.util.stream.Stream;
 
 public class StreamExamples {
 
+	private void groupByWordCount(List<Words> words) {
+		
+		Function<String,Integer> flatmap = word -> word.length();  
+//		
+//		Map<Integer,List<Words>> hm = words.stream()
+//				 .flatmap(flatmap)
+//				 .filter(count ->count > 7)
+//				 .collect(Collectors.groupingBy(
+//						   word
+//				  ));
+//		
+		
+	}
+	
+	
 	public static void main(String[] args) {
 
 		Stream<String> s1 = Stream.of("A", "B", "C");
@@ -21,6 +37,8 @@ public class StreamExamples {
 		Stream<Integer> s3 = Stream.of(1, 2, 3, 4);
 		
 		LongStream longStr = LongStream.of(10L,41L);
+		
+		longStr.sorted();
 		
 		IntStream intStr = IntStream.of(2,4,5,6,7,8,9,13,10);
 		
@@ -32,9 +50,12 @@ public class StreamExamples {
 
 		//readStreamFromFile();
 		 readDictionaryFromFile();
+		 
+		 
+		 
 	}
 	
-	private static void readDictionaryFromFile() {
+	private static List<Words> readDictionaryFromFile() {
 		
 		   Path path1 = Paths.get("C:\\PerDev\\git\\Java\\dictionaryservice\\src\\main\\resources\\dictionary.json");  
 		   
@@ -53,16 +74,17 @@ public class StreamExamples {
 					      
 			   List<Words> listWords = words.map(lines -> new Words(lines.split(":")[0],lines)).collect(Collectors.toList());
 			   //List<String> listWords = words.collect(Collectors.toList());		      
-			   listWords.forEach((word) ->{
-				   System.out.println(word.toString());
-			   });
-			   System.out.println("listWords :"+listWords.size());
-			   
+//			   listWords.forEach((word) ->{
+//				   System.out.println(word.toString());
+//			   });
+//			   System.out.println("listWords :"+listWords.size());
+			   return listWords;
 			
 		   } catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		 return null;
 		   
 	   }
 
